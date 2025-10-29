@@ -1,0 +1,30 @@
+# Ignorar pastas de build e cache
+bin/
+obj/
+.vs/
+
+# Ignorar logs e temporários
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar pacotes e dependências
+*.nupkg
+packages/
+*.snupkg
+
+# Ignorar arquivos de publicação
+publish/
+app.publish/
+
+# Ignorar configurações locais
+*.local.json
+
+# Ignorar backup de merges
+*.orig
+
+# Ignorar arquivos temporários do sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
