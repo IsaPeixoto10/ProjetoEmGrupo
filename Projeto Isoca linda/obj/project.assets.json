@@ -4458,11 +4458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
+      "projectUniqueName": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
       "projectName": "Projeto Isoca linda",
-      "projectPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
+      "projectPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
       "packagesPath": "C:\\Users\\Isabelle Peixoto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\obj\\",
+      "outputPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
