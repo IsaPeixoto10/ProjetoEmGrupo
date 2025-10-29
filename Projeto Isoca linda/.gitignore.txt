@@ -1,0 +1,52 @@
+﻿## Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResult*/
+build/
+out/
+
+## ASP.NET temporary files
+*.dbmdl
+*.bak
+*.log
+*.ldf
+*.mdf
+
+## Environment
+.env
+.env.*
+
+## Publish
+publish/
+wwwroot/lib/
+wwwroot/node_modules/
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.nuget.props
+*.nuget.targets
+packages/
+*.psess
+*.vsp
+*.vspx
+*.pidb
+
+## Others
+node_modules/
+dist/
+tmp/
+temp/
+*.swp
+*.DS_Store
+Thumbs.db
