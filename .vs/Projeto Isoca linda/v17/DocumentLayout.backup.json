@@ -34,11 +34,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -50,8 +54,7 @@
               "RelativeToolTip": "Projeto Isoca linda\\Views\\Clientes\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T14:58:24.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:58:24.078Z"
             },
             {
               "$type": "Document",
@@ -63,8 +66,7 @@
               "RelativeToolTip": "Projeto Isoca linda\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T14:57:31.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:57:31.702Z"
             },
             {
               "$type": "Document",
@@ -76,8 +78,7 @@
               "RelativeToolTip": "Projeto Isoca linda\\Controllers\\ClientesController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAIwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T14:56:57.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:56:57.167Z"
             },
             {
               "$type": "Document",
@@ -89,8 +90,7 @@
               "RelativeToolTip": "Projeto Isoca linda\\Views\\Clientes\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T14:58:39.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T14:58:39.953Z"
             },
             {
               "$type": "Document",
@@ -102,8 +102,7 @@
               "RelativeToolTip": "Projeto Isoca linda\\Views\\Clientes\\Delete.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAACYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-22T15:00:18.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T15:00:18.419Z"
             },
             {
               "$type": "Document",
@@ -113,7 +112,7 @@
               "RelativeDocumentMoniker": "Projeto Isoca linda\\Views\\Clientes\\Index.cshtml",
               "ToolTip": "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Views\\Clientes\\Index.cshtml",
               "RelativeToolTip": "Projeto Isoca linda\\Views\\Clientes\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-22T15:00:23.363Z",
               "EditorCaption": ""

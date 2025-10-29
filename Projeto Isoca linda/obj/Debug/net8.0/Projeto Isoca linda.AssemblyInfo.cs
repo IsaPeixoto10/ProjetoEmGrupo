@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projeto Isoca linda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3833168e72781d153d89250e0812ca84262bcf72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e8ca9fb76e55a94fd53af255689c83aa39c1511")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projeto Isoca linda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projeto Isoca linda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
