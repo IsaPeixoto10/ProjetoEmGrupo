@@ -28,3 +28,13 @@ app.publish/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+<<<<<<< HEAD
+=======
+
+# Build e arquivos temporários do .NET
+bin/
+obj/
+
+# Arquivos do Visual Studio
+.vs/
+>>>>>>> Ryan
