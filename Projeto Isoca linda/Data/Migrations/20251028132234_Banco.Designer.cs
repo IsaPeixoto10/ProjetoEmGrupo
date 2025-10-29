@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projeto_Isoca_linda.Data;
 
@@ -11,9 +12,11 @@ using Projeto_Isoca_linda.Data;
 namespace Projeto_Isoca_linda.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251028132234_Banco")]
+    partial class Banco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -226,34 +229,16 @@ namespace Projeto_Isoca_linda.Data.Migrations
 
             modelBuilder.Entity("Projeto_Isoca_linda.Models.Cliente", b =>
                 {
-<<<<<<< HEAD
-                    b.Property<Guid>("ClienteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CPF")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
-=======
                     b.Property<int>("ClienteId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClienteId"));
->>>>>>> Ryan
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Endereco")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-=======
->>>>>>> Ryan
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -265,8 +250,6 @@ namespace Projeto_Isoca_linda.Data.Migrations
                     b.HasKey("ClienteId");
 
                     b.ToTable("Clientes", (string)null);
-<<<<<<< HEAD
-=======
                 });
 
             modelBuilder.Entity("Projeto_Isoca_linda.Models.Pacote", b =>
@@ -327,7 +310,6 @@ namespace Projeto_Isoca_linda.Data.Migrations
                     b.HasIndex("PacoteId");
 
                     b.ToTable("Reservas", (string)null);
->>>>>>> Ryan
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

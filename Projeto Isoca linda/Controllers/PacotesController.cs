@@ -10,105 +10,85 @@ using Projeto_Isoca_linda.Models;
 
 namespace Projeto_Isoca_linda.Controllers
 {
-    public class ClientesController : Controller
+    public class PacotesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ClientesController(ApplicationDbContext context)
+        public PacotesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Clientes
+        // GET: Pacotes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            return View(await _context.Pacotes.ToListAsync());
         }
 
-        // GET: Clientes/Details/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Details(Guid? id)
-=======
+        // GET: Pacotes/Details/5
         public async Task<IActionResult> Details(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
+            var pacote = await _context.Pacotes
+                .FirstOrDefaultAsync(m => m.PacoteId == id);
+            if (pacote == null)
             {
                 return NotFound();
             }
 
-            return View(cliente);
+            return View(pacote);
         }
 
-        // GET: Clientes/Create
+        // GET: Pacotes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Clientes/Create
+        // POST: Pacotes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> Create([Bind("ClienteId,Nome,CPF,Telefone,Email,Endereco")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("PacoteId,Nome,Destino,Preco,VagasTotais,VagasDisponiveis")] Pacote pacote)
         {
             if (ModelState.IsValid)
             {
-                cliente.ClienteId = Guid.NewGuid();
-=======
-        public async Task<IActionResult> Create([Bind("ClienteId,Nome,Email,Telefone")] Cliente cliente)
-        {
-            if (ModelState.IsValid)
-            {
->>>>>>> Ryan
-                _context.Add(cliente);
+                _context.Add(pacote);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(cliente);
+            return View(pacote);
         }
 
-        // GET: Clientes/Edit/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Edit(Guid? id)
-=======
+        // GET: Pacotes/Edit/5
         public async Task<IActionResult> Edit(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente == null)
+            var pacote = await _context.Pacotes.FindAsync(id);
+            if (pacote == null)
             {
                 return NotFound();
             }
-            return View(cliente);
+            return View(pacote);
         }
 
-        // POST: Clientes/Edit/5
+        // POST: Pacotes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> Edit(Guid id, [Bind("ClienteId,Nome,CPF,Telefone,Email,Endereco")] Cliente cliente)
-=======
-        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,Nome,Email,Telefone")] Cliente cliente)
->>>>>>> Ryan
+        public async Task<IActionResult> Edit(int id, [Bind("PacoteId,Nome,Destino,Preco,VagasTotais,VagasDisponiveis")] Pacote pacote)
         {
-            if (id != cliente.ClienteId)
+            if (id != pacote.PacoteId)
             {
                 return NotFound();
             }
@@ -117,12 +97,12 @@ namespace Projeto_Isoca_linda.Controllers
             {
                 try
                 {
-                    _context.Update(cliente);
+                    _context.Update(pacote);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClienteExists(cliente.ClienteId))
+                    if (!PacoteExists(pacote.PacoteId))
                     {
                         return NotFound();
                     }
@@ -133,57 +113,45 @@ namespace Projeto_Isoca_linda.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(cliente);
+            return View(pacote);
         }
 
-        // GET: Clientes/Delete/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Delete(Guid? id)
-=======
+        // GET: Pacotes/Delete/5
         public async Task<IActionResult> Delete(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
+            var pacote = await _context.Pacotes
+                .FirstOrDefaultAsync(m => m.PacoteId == id);
+            if (pacote == null)
             {
                 return NotFound();
             }
 
-            return View(cliente);
+            return View(pacote);
         }
 
-        // POST: Clientes/Delete/5
+        // POST: Pacotes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
-=======
         public async Task<IActionResult> DeleteConfirmed(int id)
->>>>>>> Ryan
         {
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente != null)
+            var pacote = await _context.Pacotes.FindAsync(id);
+            if (pacote != null)
             {
-                _context.Clientes.Remove(cliente);
+                _context.Pacotes.Remove(pacote);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-<<<<<<< HEAD
-        private bool ClienteExists(Guid id)
-=======
-        private bool ClienteExists(int id)
->>>>>>> Ryan
+        private bool PacoteExists(int id)
         {
-            return _context.Clientes.Any(e => e.ClienteId == id);
+            return _context.Pacotes.Any(e => e.PacoteId == id);
         }
     }
 }

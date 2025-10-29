@@ -10,105 +10,94 @@ using Projeto_Isoca_linda.Models;
 
 namespace Projeto_Isoca_linda.Controllers
 {
-    public class ClientesController : Controller
+    public class ReservasController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ClientesController(ApplicationDbContext context)
+        public ReservasController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Clientes
+        // GET: Reservas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            var applicationDbContext = _context.Reservas.Include(r => r.Cliente).Include(r => r.Pacote);
+            return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Clientes/Details/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Details(Guid? id)
-=======
+        // GET: Reservas/Details/5
         public async Task<IActionResult> Details(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
+            var reserva = await _context.Reservas
+                .Include(r => r.Cliente)
+                .Include(r => r.Pacote)
+                .FirstOrDefaultAsync(m => m.ReservaId == id);
+            if (reserva == null)
             {
                 return NotFound();
             }
 
-            return View(cliente);
+            return View(reserva);
         }
 
-        // GET: Clientes/Create
+        // GET: Reservas/Create
         public IActionResult Create()
         {
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Email");
+            ViewData["PacoteId"] = new SelectList(_context.Pacotes, "PacoteId", "Destino");
             return View();
         }
 
-        // POST: Clientes/Create
+        // POST: Reservas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> Create([Bind("ClienteId,Nome,CPF,Telefone,Email,Endereco")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("ReservaId,ClienteId,PacoteId,DataReserva,Status")] Reserva reserva)
         {
             if (ModelState.IsValid)
             {
-                cliente.ClienteId = Guid.NewGuid();
-=======
-        public async Task<IActionResult> Create([Bind("ClienteId,Nome,Email,Telefone")] Cliente cliente)
-        {
-            if (ModelState.IsValid)
-            {
->>>>>>> Ryan
-                _context.Add(cliente);
+                _context.Add(reserva);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(cliente);
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Email", reserva.ClienteId);
+            ViewData["PacoteId"] = new SelectList(_context.Pacotes, "PacoteId", "Destino", reserva.PacoteId);
+            return View(reserva);
         }
 
-        // GET: Clientes/Edit/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Edit(Guid? id)
-=======
+        // GET: Reservas/Edit/5
         public async Task<IActionResult> Edit(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente == null)
+            var reserva = await _context.Reservas.FindAsync(id);
+            if (reserva == null)
             {
                 return NotFound();
             }
-            return View(cliente);
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Email", reserva.ClienteId);
+            ViewData["PacoteId"] = new SelectList(_context.Pacotes, "PacoteId", "Destino", reserva.PacoteId);
+            return View(reserva);
         }
 
-        // POST: Clientes/Edit/5
+        // POST: Reservas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> Edit(Guid id, [Bind("ClienteId,Nome,CPF,Telefone,Email,Endereco")] Cliente cliente)
-=======
-        public async Task<IActionResult> Edit(int id, [Bind("ClienteId,Nome,Email,Telefone")] Cliente cliente)
->>>>>>> Ryan
+        public async Task<IActionResult> Edit(int id, [Bind("ReservaId,ClienteId,PacoteId,DataReserva,Status")] Reserva reserva)
         {
-            if (id != cliente.ClienteId)
+            if (id != reserva.ReservaId)
             {
                 return NotFound();
             }
@@ -117,12 +106,12 @@ namespace Projeto_Isoca_linda.Controllers
             {
                 try
                 {
-                    _context.Update(cliente);
+                    _context.Update(reserva);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClienteExists(cliente.ClienteId))
+                    if (!ReservaExists(reserva.ReservaId))
                     {
                         return NotFound();
                     }
@@ -133,57 +122,49 @@ namespace Projeto_Isoca_linda.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(cliente);
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "ClienteId", "Email", reserva.ClienteId);
+            ViewData["PacoteId"] = new SelectList(_context.Pacotes, "PacoteId", "Destino", reserva.PacoteId);
+            return View(reserva);
         }
 
-        // GET: Clientes/Delete/5
-<<<<<<< HEAD
-        public async Task<IActionResult> Delete(Guid? id)
-=======
+        // GET: Reservas/Delete/5
         public async Task<IActionResult> Delete(int? id)
->>>>>>> Ryan
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.ClienteId == id);
-            if (cliente == null)
+            var reserva = await _context.Reservas
+                .Include(r => r.Cliente)
+                .Include(r => r.Pacote)
+                .FirstOrDefaultAsync(m => m.ReservaId == id);
+            if (reserva == null)
             {
                 return NotFound();
             }
 
-            return View(cliente);
+            return View(reserva);
         }
 
-        // POST: Clientes/Delete/5
+        // POST: Reservas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-<<<<<<< HEAD
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
-=======
         public async Task<IActionResult> DeleteConfirmed(int id)
->>>>>>> Ryan
         {
-            var cliente = await _context.Clientes.FindAsync(id);
-            if (cliente != null)
+            var reserva = await _context.Reservas.FindAsync(id);
+            if (reserva != null)
             {
-                _context.Clientes.Remove(cliente);
+                _context.Reservas.Remove(reserva);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-<<<<<<< HEAD
-        private bool ClienteExists(Guid id)
-=======
-        private bool ClienteExists(int id)
->>>>>>> Ryan
+        private bool ReservaExists(int id)
         {
-            return _context.Clientes.Any(e => e.ClienteId == id);
+            return _context.Reservas.Any(e => e.ReservaId == id);
         }
     }
 }

@@ -6,7 +6,11 @@
 
 <h1>Delete</h1>
 
+<<<<<<< HEAD
 <h3>Você tem certeza que deseja deletar isso?</h3>
+=======
+<h3>Are you sure you want to delete this?</h3>
+>>>>>>> Ryan
 <div>
     <h4>Cliente</h4>
     <hr />
@@ -18,10 +22,17 @@
             @Html.DisplayFor(model => model.Nome)
         </dd>
         <dt class = "col-sm-2">
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.CPF)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CPF)
+=======
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+>>>>>>> Ryan
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Telefone)
@@ -29,6 +40,7 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Telefone)
         </dd>
+<<<<<<< HEAD
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
@@ -47,5 +59,13 @@
         <input type="hidden" asp-for="ClienteId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Voltar para o início</a>
+=======
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ClienteId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+>>>>>>> Ryan
     </form>
 </div>
