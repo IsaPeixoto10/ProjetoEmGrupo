@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj": {}
+    "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj": {
+    "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
+        "projectUniqueName": "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
         "projectName": "Projeto Isoca linda",
-        "projectPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
-        "packagesPath": "C:\\Users\\Isabelle Peixoto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\Projeto Isoca linda\\obj\\",
+        "projectPath": "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Projeto Isoca linda.csproj",
+        "packagesPath": "C:\\Users\\Maria Vitoria Santos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maria Vitoria Santos\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Isabelle Peixoto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maria Vitoria Santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -70,6 +70,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Projeto_Isoca_linda.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="container mt-5">
+    <!-- Cabeçalho -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary mb-0">
+            <i class="bi bi-people-fill me-2"></i> Lista de Clientes
+        </h1>
+        <a asp-action="Create" class="btn btn-success shadow-sm px-4 py-2 rounded-3">
+            <i class="bi bi-person-plus-fill me-2"></i> Novo Cliente
+        </a>
+    </div>
+
+    <!-- Card principal -->
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Nome)</th>
+                            <th>@Html.DisplayNameFor(model => model.CPF)</th>
+                            <th>@Html.DisplayNameFor(model => model.Telefone)</th>
+                            <th>@Html.DisplayNameFor(model => model.Email)</th>
+                            <th>@Html.DisplayNameFor(model => model.Endereco)</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Endereco)</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.ClienteId" class="btn btn-sm btn-outline-primary me-1 rounded-3">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.ClienteId" class="btn btn-sm btn-outline-info me-1 rounded-3">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.ClienteId" class="btn btn-sm btn-outline-danger rounded-3">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estilo adicional -->
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+
+    td {
+        font-size: 0.95rem;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-outline-info:hover {
+        background-color: #0dcaf0;
+        color: white;
+    }
+</style>
