@@ -12,8 +12,8 @@ using Projeto_Isoca_linda.Data;
 namespace Projeto_Isoca_linda.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251022145521_banco")]
-    partial class banco
+    [Migration("20251022145521_Banco")]
+    partial class Banco
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
