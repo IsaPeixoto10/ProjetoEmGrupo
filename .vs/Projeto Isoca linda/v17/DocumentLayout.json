@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\BackEnd\\MVC\\Projeto Isoca linda\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC936D8-9796-4E94-8974-FC6328FFCDA3}|Projeto Isoca linda\\Projeto Isoca linda.csproj|c:\\users\\isabelle peixoto\\desktop\\projetoemgrupo\\projeto isoca linda\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3CC936D8-9796-4E94-8974-FC6328FFCDA3}|Projeto Isoca linda\\Projeto Isoca linda.csproj|solutionrelative:projeto isoca linda\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC936D8-9796-4E94-8974-FC6328FFCDA3}|Projeto Isoca linda\\Projeto Isoca linda.csproj|c:\\users\\isabelle peixoto\\desktop\\projetoemgrupo\\projeto isoca linda\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3CC936D8-9796-4E94-8974-FC6328FFCDA3}|Projeto Isoca linda\\Projeto Isoca linda.csproj|solutionrelative:projeto isoca linda\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Projeto Isoca linda\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Projeto Isoca linda\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T10:33:09.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Projeto Isoca linda\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Isabelle Peixoto\\Desktop\\ProjetoEmGrupo\\Projeto Isoca linda\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Projeto Isoca linda\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-28T10:27:57.486Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
